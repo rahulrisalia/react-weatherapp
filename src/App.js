@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Col, Container, Row } from "react-bootstrap";
+import "./App.css";
+import Weatherapp from "./components/Weatherapp";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container fluid>
+        <Row className="border justify-content-center main-container">
+          <Col xs={10} sm={9} md={8} lg={9} className=" border main my-4">
+            <Weatherapp />
+          </Col>
+        </Row>
+        <h1>design by rahul</h1>
+      </Container>
+    </>
   );
 }
-
 export default App;
